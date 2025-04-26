@@ -36,7 +36,7 @@ export default function Home() {
     <div>
       <h1>{isOnline ? 'Online News' : 'Offline News (Cached)'}</h1>
       {articles.length > 0 ? (
-        articles.map((article, index) => (
+        articles?.map((article, index) => (
           <div key={index}>
             <a href={article.url} target="_blank" rel="noopener noreferrer">
               {article.title}
