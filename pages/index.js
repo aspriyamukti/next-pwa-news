@@ -35,13 +35,17 @@ export default function Home() {
   return (
     <div>
       <h1>{isOnline ? 'Online News' : 'Offline News (Cached)'}</h1>
-      {articles.map((article, index) => (
-        <div key={index}>
-          <a href={article.url} target="_blank" rel="noopener noreferrer">
-            {article.title}
-          </a>
-        </div>
-      ))}
+      {articles.length > 0 ? (
+        articles.map((article, index) => (
+          <div key={index}>
+            <a href={article.url} target="_blank" rel="noopener noreferrer">
+              {article.title}
+            </a>
+          </div>
+        ))
+      ) : (
+        <p>No articles available.</p>
+      )}
     </div>
   );
 }
