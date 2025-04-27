@@ -10,7 +10,7 @@ export default function Home() {
     const fetchNews = async () => {
       try {
         if (navigator.onLine) {
-          const res = await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=433599a94aeb4c69b5427e702692cc81');
+          const res = await fetch('/api/news');
           const data = await res.json();
           setArticles(data.articles);
           localStorage.setItem('news-articles', JSON.stringify(data.articles));
