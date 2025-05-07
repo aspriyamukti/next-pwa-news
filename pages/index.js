@@ -72,13 +72,13 @@ export default function Home() {
         }
   
         .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 2rem;
-  padding: 0 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); 
+          gap: 2rem;
+          padding: 0 2rem;
+          max-width: 1000px;
+          margin: 0 auto;
+        }
 
   
         .news-card {
